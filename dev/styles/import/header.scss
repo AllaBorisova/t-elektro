@@ -1,0 +1,131 @@
+.header {
+  background: #ffffff;
+  padding-top: 3rem;
+  padding-bottom: 2.5rem;
+  box-shadow: 0px 0.7rem 2.1rem 0px rgba(61, 62, 66, 0.08);
+  position: relative;
+  z-index: 2;
+  color: #000;
+  @media (max-width: 992px) {
+    padding: 2rem 0;
+  }
+  .container_flex {
+    gap: 4.4rem;
+    align-items: center;
+    @media (max-width: 992px) {
+      justify-content: space-between;
+    }
+    @media (max-width: 767px) {
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+  }
+  .menu {
+    margin-left: auto;
+  }
+  &.open-menu {
+    position: relative;
+    .menu {
+      display: block;
+      background: #fff;
+      position: absolute;
+      right: 2rem;
+      width: 50vw;
+      padding: 2rem;
+      top: 10.7rem;
+      border: 1px solid #e2e4e6;
+      color: #000;
+      ul {
+        flex-direction: column;
+      }
+    }
+  }
+  &_grey {
+    background: #f3f5f7;
+    box-shadow: none;
+  }
+  &_main {
+    background: url(../img/header-intro.jpg) top center no-repeat;
+    color: #fff;
+    padding-bottom: 0rem;
+    box-shadow: none;
+    .logo__title,
+    .logo__subtitle,
+    .contacts-info__phone,
+    .contacts-info__callback {
+      color: #fff;
+    }
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+      background-color: #fff;
+    }
+    .logo {
+      img {
+        box-shadow: 0px 0px 3.6rem 0.4rem rgba(255, 255, 255, 0.65);
+      }
+    }
+    &:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 22.5rem;
+      background: url(../img/main-bg-left.png) top left no-repeat,
+        url(../img/main-bg-right.png) top right no-repeat;
+      position: absolute;
+      bottom: -22.5rem;
+    }
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 19.1rem;
+      background: url(../img/dots.png) left top repeat-x;
+      position: absolute;
+      bottom: -19.1rem;
+    }
+  }
+  &-intro {
+    padding-top: 9rem;
+    padding-bottom: 23.5rem;
+    max-width: 60rem;
+    &__title {
+      font-size: 5rem;
+      line-height: 6rem;
+      color: #fff;
+      font-weight: 900;
+      margin-bottom: 2.5rem;
+      @media (max-width: 767px) {
+        font-size: 3rem;
+        line-height: normal;
+      }
+    }
+    &__text {
+      font-size: 1.8rem;
+      line-height: 2.7rem;
+      color: #fff;
+      margin-bottom: 4.5rem;
+      @media (max-width: 767px) {
+        font-size: 1.6rem;
+        line-height: normal;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  .hamburger {
+    display: none;
+    @media (max-width: 992px) {
+      display: block;
+    }
+  }
+  @media (max-width: 767px) {
+    .contacts-info {
+      order: 3;
+    }
+
+    .logo {
+      max-width: calc(100% - 8rem);
+    }
+  }
+}

@@ -1,0 +1,299 @@
+.catalog-intro {
+  margin: 0 auto;
+  max-width: 182rem;
+  background: url(../img/airplane-flying-clouds.jpg) center center no-repeat;
+  background-size: cover;
+  // padding-top: 3.4rem;
+  padding-bottom: 5.2rem;
+  h1 {
+    padding-top: 15.5rem;
+    margin-bottom: 0px;
+    @media (max-width: 767px) {
+      padding-top: 0;
+    }
+  }
+  .breadcrumbs {
+    li {
+      color: #fff;
+      a {
+        color: #fff;
+      }
+      &:first-child {
+        background: url(../img/home.png) left center no-repeat;
+        padding-left: 1.7rem;
+      }
+    }
+  }
+}
+.catalog-categories {
+  padding-top: 9rem;
+  padding-bottom: 10rem;
+  background: url(../img/categories-bg.png) center top no-repeat,
+    url(../img/bg_bottom.png) 6px bottom no-repeat;
+  @media (max-width: 767px) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 767px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  &__item {
+    background: #fff;
+    padding: 2rem 2rem 4.5rem 4.5rem;
+    @media (max-width: 767px) {
+      padding: 2rem;
+    }
+  }
+  &__link {
+    display: block;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    background: url(../img/arrow.png) center center no-repeat #97a2b4;
+    margin-left: auto;
+    margin-bottom: 1.9rem;
+  }
+  &__icon {
+    display: block;
+    margin-bottom: 3.8rem;
+  }
+  &__title {
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin-bottom: 0.8rem;
+  }
+  &__text {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+  }
+}
+.catalog {
+  padding-top: 2.5rem;
+  padding-bottom: 7.5rem;
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 3rem;
+    column-gap: 2rem;
+    margin-bottom: 4.7rem;
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  }
+  &-text {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    margin-top: 6.5rem;
+  }
+  &__item {
+    padding: 1.4rem 2.7rem 4.9rem 2.7rem;
+    border: 1px solid $color-border;
+    @media (max-width: 767px) {
+      padding: 1.5rem;
+    }
+  }
+  &__img {
+    display: block;
+    width: 100%;
+    margin-bottom: 2.3rem;
+    height: 30rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (max-width: 767px) {
+      height: 15rem;
+    }
+  }
+  &__brand {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+  }
+  &__name {
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin-bottom: 3rem;
+    display: block;
+    @media (max-width: 767px) {
+      margin-bottom: 1.5rem;
+    }
+  }
+  &__desc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  &__price {
+    font-size: 3rem;
+    line-height: normal;
+    @media (max-width: 767px) {
+      font-size: 2rem;
+    }
+  }
+}
+.products-similar {
+  margin-top: 10rem;
+  @media (max-width: 767px) {
+    margin-top: 5rem;
+  }
+  &__title {
+    display: flex;
+    gap: 2.8rem;
+    align-items: center;
+    margin-bottom: 4.8rem;
+    @media (max-width: 767px) {
+      margin-bottom: 2.4rem;
+    }
+  }
+  h2 {
+    font-size: 5rem;
+    line-height: normal;
+    font-weight: 900;
+    margin: 0;
+    padding: 0;
+    @media (max-width: 767px) {
+      font-size: 3.5rem;
+    }
+  }
+}
+.product {
+  &__top {
+    display: flex;
+    gap: 5rem;
+    margin-bottom: 7.5rem;
+    flex-wrap: wrap;
+  }
+  &__left {
+    width: calc(50% - 5rem);
+    @media (max-width: 992px) {
+      width: 100%;
+    }
+    .slide-min {
+      border-bottom: 3px solid #fff;
+      padding-bottom: 0.9rem;
+      @include tr;
+      img {
+        display: block;
+        border: 1px solid $color-border;
+        opacity: 0.5;
+        @include tr;
+      }
+    }
+    .current {
+      .slide-min {
+        border-color: $color2;
+        img {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &__right {
+    width: 50%;
+    @media (max-width: 992px) {
+      width: 100%;
+    }
+  }
+  &__intro {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    margin-bottom: 4rem;
+  }
+  &__buttons {
+    display: flex;
+    gap: 3.3rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__price {
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 1em;
+    white-space: nowrap;
+  }
+  &__options {
+    margin-bottom: 5rem;
+  }
+  &__options-title {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+    padding-left: 2.7rem;
+    background: url(../img/setting.png) left center no-repeat;
+  }
+  &__options {
+    margin-bottom: 5rem;
+    max-width: 43rem;
+  }
+  &__option {
+    display: flex;
+    gap: 0.4rem;
+    margin-bottom: 0.8rem;
+    align-items: flex-start;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+  }
+  &__option-left {
+    max-width: 23rem;
+  }
+  &__option-dots {
+    border-bottom: 1px dotted #000;
+    flex: 1;
+    height: 2rem;
+  }
+  &__option-right {
+    font-weight: bold;
+  }
+}
+#sync3 {
+  padding-left: 5.5rem;
+  padding-right: 5.5rem;
+  border: 1px solid $color-border;
+  margin-bottom: 3rem;
+  &.owl-carousel .owl-nav button.owl-prev {
+    width: 3.1rem;
+    position: absolute;
+    z-index: 5;
+    height: 4.4rem;
+    top: 50%;
+    background: url("../img/arrow-left.png") center center no-repeat;
+    background-size: cover;
+    left: 2rem;
+    margin-top: -2.2rem;
+    @include tr;
+    // &:hover {
+    //   background: url("../img/product_left_arrowactive.png") center center
+    //     no-repeat #ef233c;
+    // }
+  }
+  &.owl-carousel .owl-nav button.owl-next {
+    width: 3.1rem;
+    position: absolute;
+    z-index: 5;
+    height: 4.4rem;
+    background-size: cover;
+    background: url("../img/arrow-right.png") center center no-repeat;
+    background-size: cover;
+    @include tr;
+    right: 2rem;
+    top: 50%;
+    margin-top: -2.2rem;
+    // &:hover {
+    //   background: url("../img/product_right_arrowactive.png") center center
+    //     no-repeat #ef233c;
+    // }
+  }
+}
